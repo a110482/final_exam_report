@@ -1,4 +1,4 @@
 
-class Model:
+class ViewModel:
     def query(self, vocabulary: str):
         print(vocabulary)

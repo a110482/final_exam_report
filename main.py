@@ -1,9 +1,9 @@
-from Model import Model
+from ViewModel import ViewModel
 from ViewController import ViewController
 import tkinter
 
 if __name__ == "__main__":
    viewController = ViewController()
-   model = Model()
-   viewController.bind(model=model)
+   view_model = ViewModel()
+   viewController.bind(view_model=view_model)
    viewController.run()
