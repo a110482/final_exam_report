@@ -1,5 +1,4 @@
 from tkinter import Entry
-import tkinter as tk
 from tkinter.font import Font
 
 class MyEntry(Entry):
