@@ -4,7 +4,7 @@ from views.MyEntry import MyEntry
 from tkinter.font import Font
 import threading
 
-class ViewController:
+class MainView:
     _view_model: ViewModel
     _main_view: tk.Tk
     _entry: tk.Entry

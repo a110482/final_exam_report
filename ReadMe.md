@@ -1,4 +1,5 @@
 # 開發文件
+---
 ###專題主題與簡介
 --
 英文單字查詢工具<br><br><br>
@@ -53,30 +54,48 @@ version: python 3.12
 <br><br><br>
 ###程式設計主要技巧
 --
-使用 MVC 架構（Model-View-Controller，將應用程式分為三個主要部分，以提高可維護性和可擴展性。<br>
+外觀部分使用 tkinter 套件<br>
 
-* 模型（Model）：負責處理應用程式的資料邏輯和規則。模型代表應用中的資料物件，負責與資料庫或 API 進行交互、資料的處理和保存。<br>
+資料部分使用 MVVM 架構（MVVM（Model-View-ViewModel），將應用程式分為三個主要部分，以提高可維護性和可擴展性。<br>
 
-* 視圖（View）：負責應用的用戶介面顯示。它接收來自模型的資料，並將資料呈現給使用者。視圖通常不包含任何商業邏輯，專注於顯示。<br>
+* Model（模型）：負責管理應用程式的數據和商業邏輯。它與應用的資料來源互動，例如從 API 獲取數據，並將數據處理後提供給 ViewModel。<br>
 
-* 控制器（Controller）：負責處理使用者的輸入，將這些輸入轉換成模型或視圖的操作。控制器接收使用者的動作（如點擊或輸入），並更新模型或指示視圖進行相應的顯示更新。<br>
+* View（視圖）：指的是使用者介面，直接與使用者互動。View 顯示從 ViewModel 獲取的數據，並將使用者的操作事件傳遞給 ViewModel。<br>
 
+* ViewModel（視圖模型）：位於 Model 和 View 之間。ViewModel 負責處理來自 Model 的數據並進行格式化，以便 View 能夠顯示。它也處理來自 View 的使用者輸入，並將相應的變更傳回 Model。ViewModel 通常透過資料綁定與 View 進行互動。<br>
+
+view 和 viewModel 使用 callBack 來綁定資料變動事件
 
 
 <br><br><br>
 ###原始碼重點解說
 --
-#### ViewController.py & MyEntry.py 
+#### MainView.py & MyEntry.py: 
 主要是外觀，使用 tkinter 套件繪製輸入欄位，查詢按鈕，查詢結果，歷史紀錄四個部分
 
-#### 
+#### OpenAiSentencesApi.py:
+負責對 openAI 的接口，負責發送請求和解析資料
 
-### 套件使用***
+#### OpenAiSentencesApiResponseModel.py:
+api 資料的 json response 的反序列化（Deserialization) 物件<br>
+方便操作及取得資料
+
+#### main.py:
+程式執行入口
+
+#### ApiKey.py:
+存放 openAI 的金鑰
+
+### 套件使用
+--
+`tkinter` 內建的 ＵＩ套件 不需安裝
 `dataclass_wizard`: 解析 json 物件 <br>
 `requests`: 請求 api<br>
+其餘套件為相依套件
 
-
+<br><br><br><br>
 #使用手冊 
+---
 需有程式安裝、執行說明；程式功能介紹、操作說明。
 
 ### 安裝環境
