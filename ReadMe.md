@@ -1,44 +1,41 @@
 # 開發文件
----
-###專題主題與簡介
---
-英文單字查詢工具<br><br><br>
-###小組分工
---
-####李能安
+
+**專題主題與簡介:**<br>
+英文單字查詢工具<br><br>
+
+**小組分工:**<br>
+`李能安`
 * 投影片製作
 * 申請 openAI api 金鑰
 
-####林睿傳
+`林睿傳`
 * 開發文件
 * 外觀設計
 
-####郭思延
+`郭思延`
 * 使用手冊
 * 交互邏輯規劃
 
-####楊景翔
+`楊景翔`
 * 介紹海報
 * 後期測試
 
-####董奕辰
+`董奕辰`
 * 專案報告人
 * 時程規劃及成員協調
 
-####譚培成
+`譚培成`
 * 初期規劃
 * 資料統整
 
 
 <br><br><br>
-###開發環境
---
+**開發環境:**<br>
 IDE: PyCharm<br>
 version: python 3.12
 
 <br><br><br>
-###系統開發流程
---
+**系統開發流程:**<br>
 企劃發想<br>
 初期規劃<br>
 制定規格<br>
@@ -51,9 +48,8 @@ version: python 3.12
 開發完成<br>
 
 
-<br><br><br>
-###程式設計主要技巧
---
+<br><br>
+**程式設計主要技巧:**<br>
 外觀部分使用 tkinter 套件<br>
 
 資料部分使用 MVVM 架構（MVVM（Model-View-ViewModel），將應用程式分為三個主要部分，以提高可維護性和可擴展性。<br>
@@ -67,10 +63,9 @@ version: python 3.12
 view 和 viewModel 使用 callBack 來綁定資料變動事件
 
 
-<br><br><br>
-###原始碼重點解說
---
-#### MainView.py & MyEntry.py: 
+<br><br>
+**原始碼重點解說:**<br>
+#### MainView.py & MyEntry.py:
 主要是外觀，使用 tkinter 套件繪製輸入欄位，查詢按鈕，查詢結果，歷史紀錄四個部分
 
 #### OpenAiSentencesApi.py:
@@ -85,38 +80,37 @@ api 資料的 json response 的反序列化（Deserialization) 物件<br>
 
 #### ApiKey.py:
 存放 openAI 的金鑰
-
+<br><br>
 ### 套件使用
---
 `tkinter` 內建的 ＵＩ套件 不需安裝
 `dataclass_wizard`: 解析 json 物件 <br>
 `requests`: 請求 api<br>
 其餘套件為相依套件
 
 <br><br><br><br>
-#使用手冊 
----
-需有程式安裝、執行說明；程式功能介紹、操作說明。
 
-### 安裝環境
+# 使用手冊
+
+**安裝環境:**<br>
 mac: `brew install python-tk`<br>
 
-### 安裝套件
+**安裝套件:**<br>
 `pip install -r requirements.txt`
 
-### 執行
+**執行:**<br>
 複製 APIKey.py 檔案到專案資料夾下面
 放在 main.py 旁邊<br>
 執行`python main.py`
 
-### 程式功能介紹
+**程式功能介紹:**<br>
 查詢單字，給出中英文翻譯<br>
 還有中英對照例句<br>
 右側有查詢歷史紀錄<br>
 點擊歷史紀錄可以查詢之前查過的單字
 
-### 操作說明
+**操作說明:**<br>
 <這裡請同學幫我補上 謝謝>
+
 
 
 
